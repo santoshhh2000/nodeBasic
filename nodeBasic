@@ -1,0 +1,32 @@
+How does the internet work?
+The internet is a global network of interconnected computers that communicate using standardized protocols. Data is broken down into packets, routed through various networks, and reassembled at its destination.
+
+Core modules of Node.js:
+Some core modules of Node.js include fs (File System), http (HTTP), path, os (Operating System), events, and util. These modules provide essential functionality for file system manipulation, creating HTTP servers, working with paths, obtaining operating system information, handling events, and utility functions.
+
+Relative path and absolute path:
+
+Relative path: Specifies the location of a file or directory relative to the current working directory.
+Absolute path: Specifies the full path to a file or directory from the root directory of the file system.
+createServer function:
+The createServer function is provided by the http module in Node.js. It creates an HTTP server that listens for incoming requests and executes a callback function to handle those requests.
+
+Anonymous functions:
+Anonymous functions, or function expressions, are functions without a name. They can be assigned to variables or passed as arguments to other functions.
+
+server.listen method:
+The server.listen method starts the Node.js server, binding it to a specified port. It is necessary to call this method after creating an HTTP server using createServer.
+
+Now, let's create a server that listens on port 4000 and prints "Your Name" when accessed:
+
+javascript
+Copy code
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    res.end('Your Name');
+});
+
+server.listen(4000, () => {
+    console.log('Server is running on port 4000');
+});
